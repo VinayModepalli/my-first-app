@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 
 class Avengers extends Component {
     render () {
+        const {name, heroname, rank} = this.props;
         return (
             <div className="avenger">
-                <div>Name : Tony Stark</div>
-                <div>HeroName : Iron Man</div>
-                <div>Rank : 1</div>
+                <div>Name : { name }</div>
+                <div>HeroName : { heroname }</div>
+                <div>Rank : { rank }</div>
             </div>
         );
     }
