@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
-
-class Avengers extends Component {
-    render () {
-        const {avengers} = this.props;
+import React from 'react';
+const Avengers = (props) => {
+        const {avengers} = props;
         const AvengerList = avengers.map( avenger => {
             return (
                 <div className="avenger" key={avenger.rank}>
@@ -17,7 +15,6 @@ class Avengers extends Component {
                 { AvengerList }
             </div>
         );
-    }
 }
 
 export default Avengers;
