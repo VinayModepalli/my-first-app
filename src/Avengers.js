@@ -1,12 +1,12 @@
 import React from 'react';
 const Avengers = ({avengers}) => {
         // const AvengerList = avengers.map( avenger => {
-        //     if (avenger.rank<3){
+        //     if (avenger.power<3){
         //         return (
         //             <div className="avenger" key={avenger.rank}>
         //                 <div>Name : { avenger.name }</div>
         //                 <div>HeroName : { avenger.heroname }</div>
-        //                 <div>Rank : { avenger.rank }</div>
+        //                 <div>Power : { avenger.power }</div>
         //             </div>
         //         );
         //     } else{
@@ -15,11 +15,11 @@ const Avengers = ({avengers}) => {
             
         // })
         const AvengerList = avengers.map( avenger => {
-            return avenger.rank<3? (
+            return avenger.power > 85 ? (
                 <div className="avenger" key={avenger.rank}>
                          <div>Name : { avenger.name }</div>
                          <div>HeroName : { avenger.heroname }</div>
-                         <div>Rank : { avenger.rank }</div>
+                         <div>Power : { avenger.power }</div>
                 </div>
             ) : null;
         });
