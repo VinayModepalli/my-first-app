@@ -1,5 +1,5 @@
 import React from 'react';
-const Avengers = ({avengers}) => {
+const Avengers = ({avengers , deleteAvenger}) => {
         // const AvengerList = avengers.map( avenger => {
         //     if (avenger.power<3){
         //         return (
@@ -20,6 +20,7 @@ const Avengers = ({avengers}) => {
                          <div>Name : { avenger.name }</div>
                          <div>HeroName : { avenger.heroname }</div>
                          <div>Power : { avenger.power }</div>
+                         <button onClick={() => {deleteAvenger(avenger.id)}} >Delete</button>
                 </div>
             ) : null;
         });

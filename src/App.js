@@ -15,13 +15,23 @@ class App extends Component {
     this.setState({
       avengers : avengers
     })
+    console.log("hi")
+    console.log(this.state.avengers)
+  }
+  deleteAvenger = (id) => {
+    let avengers = this.state.avengers.filter ( avenger => {
+      return avenger.id !== id
+    })
+    this.setState({
+      avengers : avengers
+    })
   }
   render () {
     return (
       <div className="App">
         <h1>My First App</h1>
-        <p>Happy Coding..!</p>
-        <Avengers avengers={this.state.avengers} />
+        <p>Happy Coding..! </p>
+        <Avengers avengers={this.state.avengers} deleteAvenger={this.deleteAvenger}/>
         <br></br>
         <AddAvenger addAvenger={this.addAvenger}/>
       </div>
